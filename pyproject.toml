@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "hypermodern-python"
+version = "0.1.0"
+description = "The hypermodern Python project"
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/orangerj/hypermodern-python"
+repository = "https://github.com/orangerj/hypermodern-python"
+keywords = ["hypermodern"]
+authors = ["Bob orange <rjo.min@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+click = "^8.1.3"
+requests = "^2.27.1"
+
+[tool.poetry.dev-dependencies]
+
+[tool.poetry.scripts]
+hypermodern-python = "hypermodern_python.console:main"
+
+[tool.coverage.paths]
+source = ["src"]
+
+[tool.coverage.run]
+branch = true
+source = ["hypermodern_python"]
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
